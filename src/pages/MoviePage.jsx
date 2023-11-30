@@ -1,7 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Movies from "../assets/data";
+import PageNotFound from "./PageNotFound";
 function MoviePage() {
     const { id } = useParams();
+    if(id>Movies.length){
+        console.log('hi');
+        return <Navigate to='/page-not-found' />
+    }
     const movie = Movies.filter(Movie => Movie.id == id);
     return(
         <>

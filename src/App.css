@@ -113,3 +113,10 @@ input[type="text"] {
 input:focus{
   border: 2px solid rgb(121, 155, 255);
 }
+
+.page-not-found{
+  display: flex;
+  margin: 45vh 10px;
+  justify-content: center;
+  align-items: center;
+}
